@@ -1,5 +1,5 @@
 # Financial Report Intelligence
-
+<img width="800" height="597" alt="front" src="https://github.com/user-attachments/assets/ce980aa4-5e12-458a-a43b-f56beed8fdfc" />
 An AI-powered document analysis project for extracting structured
 information from **independent audit reports** and **credit rating
 reports**.
