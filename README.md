@@ -5,7 +5,7 @@ information from **independent audit reports** and **credit rating
 reports**.
 
 The project combines traditional PDF processing techniques with
-**RegEx**, selective **OCR**, and the **Qwen2.5 Large Language Model**
+**RegEx**, and the **Qwen2.5 Large Language Model**
 to analyze financial reports and convert unstructured document content
 into structured information.
 
@@ -20,8 +20,6 @@ This project was developed as an end-to-end document analysis pipeline
 that can:
 
 -   Read machine-readable PDF documents with **PyMuPDF (fitz)**
--   Use **OCR / Image-to-Text** only when a page cannot be read directly
-    as text
 -   Identify the document type using **RegEx-based rules**
 -   Extract contextual information with **Qwen2.5**
 -   Identify the main company / subject of the report
@@ -55,7 +53,7 @@ PDF Reports
 PDF Text Extraction
 (PyMuPDF / fitz)
     |
-    +----> Image-based page? ----> OCR / Image-to-Text
+    |
     |
     v
 Text Cleaning & Preparation
@@ -92,31 +90,12 @@ CSV Export
 -   Google Colab
 -   PyMuPDF (`fitz`)
 -   RegEx
--   OCR / Image-to-Text
 -   Qwen2.5
 -   Hugging Face Transformers
 -   PyTorch
 -   Pandas
 -   Gradio
-
-## PDF Processing
-
-The project does **not** apply OCR to every document by default.
-
-For machine-readable PDF files, text is extracted directly using
-**PyMuPDF**, which is faster and preserves the existing digital text.
-
-OCR is reserved for pages where direct text extraction is not
-sufficient. This creates a hybrid document-processing approach:
-
-``` text
-Digital PDF  -> PyMuPDF
-Scanned Page -> OCR
-```
-
-This avoids unnecessary OCR processing while still supporting
-image-based document content.
-
+-   
 ## Document Type Detection
 
 RegEx-based rules are used for rule-oriented document analysis,
@@ -263,7 +242,6 @@ information extraction depends on more than the language model itself.
 Reliable results required combining:
 
 -   Appropriate PDF extraction methods
--   Selective OCR
 -   Rule-based RegEx processing
 -   Relevant document context
 -   Carefully designed prompts
