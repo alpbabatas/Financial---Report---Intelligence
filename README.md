@@ -1,5 +1,5 @@
 # Financial Report Intelligence
-![front-ezgif.com-optimize](front-ezgif.com-optimize.gif)
+
 An AI-powered document analysis project for extracting structured
 information from **independent audit reports** and **credit rating
 reports**.
@@ -293,4 +293,3 @@ Possible future extensions include:
 This project was developed for educational and experimental purposes.
 Extracted information should be verified before being used in financial,
 audit, compliance, or other high-stakes decisions.
-
